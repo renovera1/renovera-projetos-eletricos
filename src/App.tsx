@@ -28,6 +28,7 @@ const baseMessage =
   "Olá, quero solicitar uma análise técnica para projeto elétrico de baixa, média e alta tensão, subestação, entrada de energia ou ACL.";
 
 const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(baseMessage)}`;
+const logoSrc = `${import.meta.env.BASE_URL}logo-renovera.png`;
 
 function WhatsAppIcon() {
   return (
@@ -175,7 +176,7 @@ function App() {
       <header className="site-header">
         <div className="container nav">
           <a href="#inicio" className="brand" aria-label="Renovera">
-            <img src="/logo-renovera.png" alt="Renovera" />
+            <img src={logoSrc} alt="Renovera" />
           </a>
 
           <nav className="nav-links" aria-label="Navegação principal">
@@ -454,7 +455,7 @@ function App() {
       <footer className="footer">
         <div className="container footer-grid">
           <div className="footer-brand">
-            <img src="/logo-renovera.png" alt="Renovera" />
+            <img src={logoSrc} alt="Renovera" />
             <p>Engenharia, projetos elétricos e consultoria técnica para empresas que precisam aprovar infraestrutura com segurança e precisão.</p>
           </div>
 
