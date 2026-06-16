@@ -23,6 +23,7 @@ import {
 import LiveEditor from "./LiveEditor";
 
 const WHATSAPP_NUMBER = "5519996514827";
+const logoSrc = `${import.meta.env.BASE_URL}logo-renovera.png`;
 
 const baseMessage =
   "Olá, quero solicitar uma análise técnica para projeto elétrico de baixa, média e alta tensão, subestação, entrada de energia ou ACL.";
