@@ -19,7 +19,11 @@ function getEditableElements() {
 }
 
 export default function LiveEditor({ namespace }: { namespace: string }) {
-  const isEditorRoute = typeof window !== "undefined" && window.location.pathname === "/editor";
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const editorPath = `${basePath}/editor`;
+  const isEditorRoute =
+    typeof window !== "undefined" &&
+    (window.location.pathname === "/editor" || window.location.pathname === editorPath);
   const storageKey = useMemo(() => `renovera-live-editor:${namespace}`, [namespace]);
   const [enabled, setEnabled] = useState(false);
   const [status, setStatus] = useState("Editor pronto.");
