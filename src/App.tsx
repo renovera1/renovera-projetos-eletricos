@@ -23,12 +23,17 @@ import {
 import LiveEditor from "./LiveEditor";
 
 const WHATSAPP_NUMBER = "5519996514827";
+const buildWhatsappUrl = (message: string) =>
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 const logoSrc = `${import.meta.env.BASE_URL}logo-renovera.png`;
 
 const baseMessage =
-  "Olá, quero solicitar uma análise técnica para projeto elétrico de baixa, média e alta tensão, subestação, entrada de energia ou ACL.";
+  "Olá, Renovera. Gostaria de receber uma análise técnica para projeto elétrico, subestação, estudo elétrico ou linha de transmissão.";
 
-const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(baseMessage)}`;
+const whatsappLink = buildWhatsappUrl(baseMessage);
+const universalWhatsappLink = buildWhatsappUrl(
+  "Olá, Renovera. Gostaria de receber uma análise técnica pelo WhatsApp."
+);
 
 function WhatsAppIcon() {
   return (
@@ -43,39 +48,46 @@ const aclOptions = ["Sim", "Não", "Avaliar Viabilidade"];
 
 const services = [
   {
-    icon: RadioTower,
-    title: "Projetos de Subestações de Energia",
+    icon: Factory,
+    title: "Projetos Elétricos Industriais",
     description:
-      "Dimensionamento, especificação e detalhamento executivo de subestações abrigadas, aéreas, em poste blindado ou em alvenaria, incluindo cabines primárias e retrofit de subestações antigas.",
+      "Projetos básicos e executivos para instalações industriais, contemplando subestação abaixadora, iluminação, aterramento, SPDA, alimentação de força, diagramas de painéis, controle, comando e automação industrial.",
+    cta: "Planejar projeto industrial"
+  },
+  {
+    icon: Building2,
+    title: "Projetos Elétricos Comerciais",
+    description:
+      "Projetos básicos e executivos para empreendimentos comerciais, incluindo subestação abaixadora, iluminação, aterramento, SPDA, alimentação de força e diagramas de painéis.",
+    cta: "Planejar projeto comercial"
+  },
+  {
+    icon: RadioTower,
+    title: "Subestações de Energia",
+    description:
+      "Projetos básicos e executivos de subestações de energia, incluindo projeto eletromecânico, projeto elétrico, SPCS e apoio técnico como engenharia do proprietário, análise de projetos e fiscalização de obras.",
     cta: "Validar subestação"
   },
   {
-    icon: Network,
-    title: "Projetos de Linhas de Distribuição e Redes de Média Tensão",
+    icon: ShieldCheck,
+    title: "Estudos Elétricos",
     description:
-      "Redes internas de distribuição para condomínios industriais, logísticos e comerciais, com expansão estruturada e critérios técnicos de continuidade operacional.",
-    cta: "Analisar rede interna"
+      "Estudos técnicos para análise e segurança do sistema elétrico, incluindo estudo de curto-circuito, coordenação e seletividade, ATPV, energia incidente, arc-flash e campo eletromagnético.",
+    cta: "Solicitar estudo elétrico"
   },
   {
-    icon: ShieldCheck,
-    title: "Estudos de Coordenação e Seletividade de Proteção",
+    icon: Network,
+    title: "Linhas de Transmissão",
     description:
-      "Parametrização e ajuste de relés para garantir que, em caso de falha, apenas o disjuntor mais próximo isole o defeito, evitando o desligamento de uma planta inteira.",
-    cta: "Solicitar estudo de proteção"
+      "Projetos básicos e executivos de linhas de transmissão, contemplando projeto eletromecânico e apoio técnico como engenharia do proprietário, análise de projetos e fiscalização de obras.",
+    cta: "Analisar linha de transmissão"
   },
   {
     icon: FileCheck2,
-    title: "Projetos de Entrada de Energia em Alta/Média Tensão",
+    title: "Linhas de Transmissão Subterrânea",
     description:
-      "Desenho técnico, memorial descritivo e documentação para aprovação de novos padrões de entrada junto a concessionárias.",
-    cta: "Aprovar entrada de energia"
-  },
-  {
-    icon: Landmark,
-    title: "Migração e Gestão no Mercado Livre de Energia (ACL)",
-    description:
-      "Estudos de viabilidade técnica e regulatória para consumidores do Grupo A migrarem para o Ambiente de Contratação Livre.",
-    cta: "Avaliar ACL"
+      "Projetos básicos e executivos de linhas de transmissão subterrânea, com apoio técnico para engenharia do proprietário, análise de projetos e fiscalização de obras.",
+    cta: "Avaliar linha subterrânea"
   }
 ];
 
@@ -286,10 +298,10 @@ function App() {
             </div>
 
             <div className="services-grid">
-              {services.map((service, index) => {
+              {services.map((service) => {
                 const Icon = service.icon;
                 return (
-                  <article className={`service-card ${index === 4 ? "wide" : ""}`} key={service.title}>
+                  <article className="service-card" key={service.title}>
                     <div className="icon-box">
                       <Icon size={26} />
                     </div>
@@ -459,25 +471,28 @@ function App() {
             <p>Engenharia, projetos elétricos e consultoria técnica para empresas que precisam aprovar infraestrutura com segurança e precisão.</p>
           </div>
 
-          <div className="footer-col">
-            <h4>Menu</h4>
-            <a href="#solucoes">Soluções</a>
-            <a href="#viabilidade">Viabilidade</a>
-            <a href="#metodo">Método</a>
-            <a href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp</a>
+          <div className="footer-col footer-grid-three">
+            <div className="footer-panel">
+              <h4><span className="footer-icon">01</span>ENDEREÇO</h4>
+              <p>Rua Visconde do Rio Branco, n.106, Centro, São João da Boa Vista - SP, CEP: 13870-180</p>
+            </div>
+            <div className="footer-panel">
+              <h4><span className="footer-icon">02</span>TELEFONES</h4>
+              <a href="https://wa.me/5519996514827" target="_blank" rel="noreferrer">+55 (19) 99651-4827</a>
+              <a href="tel:+551931950160">+55 (19) 3195-0160</a>
+            </div>
+            <div className="footer-panel">
+              <h4><span className="footer-icon">03</span>E-MAIL</h4>
+              <a href="mailto:contato@renovera.com.br">contato@renovera.com.br</a>
+              <p>Projetos industriais, comerciais, subestações, estudos elétricos e linhas de transmissão.</p>
+            </div>
           </div>
-
-          <div className="footer-col">
-            <h4>Contato</h4>
-            <p>R. Visc. de Rio Branco, 106</p>
-            <p>São João da Boa Vista - SP</p>
-            <a href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp técnico</a>
-          </div>
-
-          <div className="footer-col">
-            <h4>Escopo técnico</h4>
-            <p>Projetos elétricos, subestações, proteção, entrada de energia, concessionárias e ACL.</p>
-          </div>
+        </div>
+        <div className="container ecosystem-links">
+          <a href="https://renovera1.github.io/renovera-consultoria-regulatoria/" target="_blank" rel="noreferrer">Consultoria Regulatória</a>
+          <a href="https://renovera1.github.io/renovera-projetos-eletricos/" target="_blank" rel="noreferrer">Projetos Elétricos</a>
+          <a href="https://renovera1.github.io/renovera-energia-solar/" target="_blank" rel="noreferrer">Energia Solar</a>
+          <a href="https://renovera1.github.io/renovera-eletroposto/" target="_blank" rel="noreferrer">Eletropostos</a>
         </div>
 
         <div className="container footer-bottom">
@@ -485,7 +500,7 @@ function App() {
         </div>
       </footer>
 
-      <a className="floating-whatsapp" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Falar com a Renovera">
+      <a className="floating-whatsapp" href={universalWhatsappLink} target="_blank" rel="noreferrer" aria-label="Receber análise pelo WhatsApp">
         <WhatsAppIcon />
       </a>
       <LiveEditor namespace="renovera-projetos-eletricos-consultoria" />
@@ -548,7 +563,7 @@ function LeadModal({
       `ACL: ${acl}`
     ].join("\n");
 
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(buildWhatsappUrl(message), "_blank", "noreferrer");
     onClose();
   }
 
