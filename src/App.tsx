@@ -28,11 +28,11 @@ const buildWhatsappUrl = (message: string) =>
 const logoSrc = `${import.meta.env.BASE_URL}logo-renovera.png`;
 
 const baseMessage =
-  "OlÃƒÂ¡, Renovera. Gostaria de receber uma anÃƒÂ¡lise tÃƒÂ©cnica para projeto elÃƒÂ©trico, subestaÃƒÂ§ÃƒÂ£o, estudo elÃƒÂ©trico ou linha de transmissÃƒÂ£o.";
+  "Olá, Renovera. Gostaria de receber uma análise técnica para projeto elétrico, subestação, estudo elétrico ou linha de transmissão.";
 
 const whatsappLink = buildWhatsappUrl(baseMessage);
 const universalWhatsappLink = buildWhatsappUrl(
-  "OlÃƒÂ¡, Renovera. Gostaria de receber uma anÃƒÂ¡lise tÃƒÂ©cnica pelo WhatsApp."
+  "Olá, Renovera. Gostaria de receber uma análise técnica pelo WhatsApp."
 );
 
 function WhatsAppIcon() {
@@ -44,96 +44,96 @@ function WhatsAppIcon() {
 }
 
 const concessionarias = ["CPFL", "Neoenergia Elektro", "Energisa", "Cemig", "EDP", "Outra"];
-const aclOptions = ["Sim", "NÃƒÂ£o", "Avaliar Viabilidade"];
+const aclOptions = ["Sim", "Não", "Avaliar Viabilidade"];
 
 const services = [
   {
     icon: Factory,
-    title: "Projetos ElÃƒÂ©tricos Industriais",
+    title: "Projetos Elétricos Industriais",
     description:
-      "Projetos bÃƒÂ¡sicos e executivos para instalaÃƒÂ§ÃƒÂµes industriais, contemplando subestaÃƒÂ§ÃƒÂ£o abaixadora, iluminaÃƒÂ§ÃƒÂ£o, aterramento, SPDA, alimentaÃƒÂ§ÃƒÂ£o de forÃƒÂ§a, diagramas de painÃƒÂ©is, controle, comando e automaÃƒÂ§ÃƒÂ£o industrial.",
+      "Projetos básicos e executivos para instalações industriais, contemplando subestação abaixadora, iluminação, aterramento, SPDA, alimentação de força, diagramas de painéis, controle, comando e automação industrial.",
     cta: "Planejar projeto industrial"
   },
   {
     icon: Building2,
-    title: "Projetos ElÃƒÂ©tricos Comerciais",
+    title: "Projetos Elétricos Comerciais",
     description:
-      "Projetos bÃƒÂ¡sicos e executivos para empreendimentos comerciais, incluindo subestaÃƒÂ§ÃƒÂ£o abaixadora, iluminaÃƒÂ§ÃƒÂ£o, aterramento, SPDA, alimentaÃƒÂ§ÃƒÂ£o de forÃƒÂ§a e diagramas de painÃƒÂ©is.",
+      "Projetos básicos e executivos para empreendimentos comerciais, incluindo subestação abaixadora, iluminação, aterramento, SPDA, alimentação de força e diagramas de painéis.",
     cta: "Planejar projeto comercial"
   },
   {
     icon: RadioTower,
-    title: "SubestaÃƒÂ§ÃƒÂµes de Energia",
+    title: "Subestações de Energia",
     description:
-      "Projetos bÃƒÂ¡sicos e executivos de subestaÃƒÂ§ÃƒÂµes de energia, incluindo projeto eletromecÃƒÂ¢nico, projeto elÃƒÂ©trico, SPCS e apoio tÃƒÂ©cnico como engenharia do proprietÃƒÂ¡rio, anÃƒÂ¡lise de projetos e fiscalizaÃƒÂ§ÃƒÂ£o de obras.",
-    cta: "Validar subestaÃƒÂ§ÃƒÂ£o"
+      "Projetos básicos e executivos de subestações de energia, incluindo projeto eletromecânico, projeto elétrico, SPCS e apoio técnico como engenharia do proprietário, análise de projetos e fiscalização de obras.",
+    cta: "Validar subestação"
   },
   {
     icon: ShieldCheck,
-    title: "Estudos ElÃƒÂ©tricos",
+    title: "Estudos Elétricos",
     description:
-      "Estudos tÃƒÂ©cnicos para anÃƒÂ¡lise e seguranÃƒÂ§a do sistema elÃƒÂ©trico, incluindo estudo de curto-circuito, coordenaÃƒÂ§ÃƒÂ£o e seletividade, ATPV, energia incidente, arc-flash e campo eletromagnÃƒÂ©tico.",
-    cta: "Solicitar estudo elÃƒÂ©trico"
+      "Estudos técnicos para análise e segurança do sistema elétrico, incluindo estudo de curto-circuito, coordenação e seletividade, ATPV, energia incidente, arc-flash e campo eletromagnético.",
+    cta: "Solicitar estudo elétrico"
   },
   {
     icon: Network,
-    title: "Linhas de TransmissÃƒÂ£o",
+    title: "Linhas de Transmissão",
     description:
-      "Projetos bÃƒÂ¡sicos e executivos de linhas de transmissÃƒÂ£o, contemplando projeto eletromecÃƒÂ¢nico e apoio tÃƒÂ©cnico como engenharia do proprietÃƒÂ¡rio, anÃƒÂ¡lise de projetos e fiscalizaÃƒÂ§ÃƒÂ£o de obras.",
-    cta: "Analisar linha de transmissÃƒÂ£o"
+      "Projetos básicos e executivos de linhas de transmissão, contemplando projeto eletromecânico e apoio técnico como engenharia do proprietário, análise de projetos e fiscalização de obras.",
+    cta: "Analisar linha de transmissão"
   },
   {
     icon: FileCheck2,
-    title: "Linhas de TransmissÃƒÂ£o SubterrÃƒÂ¢nea",
+    title: "Linhas de Transmissão Subterrânea",
     description:
-      "Projetos bÃƒÂ¡sicos e executivos de linhas de transmissÃƒÂ£o subterrÃƒÂ¢nea, com apoio tÃƒÂ©cnico para engenharia do proprietÃƒÂ¡rio, anÃƒÂ¡lise de projetos e fiscalizaÃƒÂ§ÃƒÂ£o de obras.",
-    cta: "Avaliar linha subterrÃƒÂ¢nea"
+      "Projetos básicos e executivos de linhas de transmissão subterrânea, com apoio técnico para engenharia do proprietário, análise de projetos e fiscalização de obras.",
+    cta: "Avaliar linha subterrânea"
   }
 ];
 
 const sectors = [
   {
     icon: Building2,
-    title: "CondomÃƒÂ­nios Industriais e LogÃƒÂ­sticos",
-    description: "Redes de distribuiÃƒÂ§ÃƒÂ£o, expansÃƒÂ£o elÃƒÂ©trica e alta demanda de potÃƒÂªncia."
+    title: "Condomínios Industriais e Logísticos",
+    description: "Redes de distribuição, expansão elétrica e alta demanda de potência."
   },
   {
     icon: Factory,
-    title: "Plantas Fabris e IndÃƒÂºstrias do Grupo A",
-    description: "SubestaÃƒÂ§ÃƒÂµes, proteÃƒÂ§ÃƒÂ£o, seletividade e enquadramento no ACL."
+    title: "Plantas Fabris e Indústrias do Grupo A",
+    description: "Subestações, proteção, seletividade e enquadramento no ACL."
   },
   {
     icon: Gauge,
-    title: "Shoppings, Grandes ComÃƒÂ©rcios e Hipermercados",
-    description: "Entradas de energia de mÃƒÂ©dia tensÃƒÂ£o, cabines primÃƒÂ¡rias e aumento de demanda."
+    title: "Shoppings, Grandes Comércios e Hipermercados",
+    description: "Entradas de energia de média tensão, cabines primárias e aumento de demanda."
   },
   {
     icon: HardHat,
     title: "Construtoras e Incorporadoras",
-    description: "Infraestrutura elÃƒÂ©trica desde a fase greenfield atÃƒÂ© a energizaÃƒÂ§ÃƒÂ£o."
+    description: "Infraestrutura elétrica desde a fase greenfield até a energização."
   }
 ];
 
 const process = [
   {
     step: "01",
-    title: "DiagnÃƒÂ³stico tÃƒÂ©cnico",
-    description: "Levantamento da demanda, tensÃƒÂ£o de atendimento, padrÃƒÂ£o existente e objetivo do empreendimento."
+    title: "Diagnóstico técnico",
+    description: "Levantamento da demanda, tensão de atendimento, padrão existente e objetivo do empreendimento."
   },
   {
     step: "02",
-    title: "EstratÃƒÂ©gia de aprovaÃƒÂ§ÃƒÂ£o",
-    description: "DefiniÃƒÂ§ÃƒÂ£o do caminho tÃƒÂ©cnico-regulatÃƒÂ³rio mais seguro para reduzir exigÃƒÂªncias, retrabalho e atrasos."
+    title: "Estratégia de aprovação",
+    description: "Definição do caminho técnico-regulatório mais seguro para reduzir exigências, retrabalho e atrasos."
   },
   {
     step: "03",
-    title: "Projeto e documentaÃƒÂ§ÃƒÂ£o",
-    description: "ElaboraÃƒÂ§ÃƒÂ£o de desenhos, memorial, estudos de proteÃƒÂ§ÃƒÂ£o e documentos tÃƒÂ©cnicos para protocolo."
+    title: "Projeto e documentação",
+    description: "Elaboração de desenhos, memorial, estudos de proteção e documentos técnicos para protocolo."
   },
   {
     step: "04",
-    title: "Interface com concessionÃƒÂ¡ria",
-    description: "Acompanhamento tÃƒÂ©cnico das exigÃƒÂªncias, respostas e adequaÃƒÂ§ÃƒÂµes atÃƒÂ© a aprovaÃƒÂ§ÃƒÂ£o."
+    title: "Interface com concessionária",
+    description: "Acompanhamento técnico das exigências, respostas e adequações até a aprovação."
   }
 ];
 
@@ -149,14 +149,14 @@ function App() {
     if (!demand) {
       return {
         label: "Aguardando dados",
-        title: "Informe a demanda para gerar uma leitura tÃƒÂ©cnica preliminar."
+        title: "Informe a demanda para gerar uma leitura técnica preliminar."
       };
     }
 
     if (Number.isNaN(parsedDemand) || parsedDemand <= 0) {
       return {
-        label: "Dado invÃƒÂ¡lido",
-        title: "Informe uma demanda vÃƒÂ¡lida em kW para continuar."
+        label: "Dado inválido",
+        title: "Informe uma demanda válida em kW para continuar."
       };
     }
 
@@ -164,22 +164,22 @@ function App() {
       return {
         label: "Alta complexidade",
         title:
-          "Demanda com perfil crÃƒÂ­tico. RecomendÃƒÂ¡vel anÃƒÂ¡lise de subestaÃƒÂ§ÃƒÂ£o, proteÃƒÂ§ÃƒÂ£o, padrÃƒÂ£o de entrada, demanda contratada e estratÃƒÂ©gia de aprovaÃƒÂ§ÃƒÂ£o."
+          "Demanda com perfil crítico. Recomendável análise de subestação, proteção, padrão de entrada, demanda contratada e estratégia de aprovação."
       };
     }
 
     if (parsedDemand >= 75) {
       return {
-        label: "MÃƒÂ©dia tensÃƒÂ£o provÃƒÂ¡vel",
+        label: "Média tensão provável",
         title:
-          "Projeto com potencial necessidade de adequaÃƒÂ§ÃƒÂ£o em mÃƒÂ©dia tensÃƒÂ£o, validaÃƒÂ§ÃƒÂ£o de padrÃƒÂ£o de entrada e interface tÃƒÂ©cnica com a concessionÃƒÂ¡ria."
+          "Projeto com potencial necessidade de adequação em média tensão, validação de padrão de entrada e interface técnica com a concessionária."
       };
     }
 
     return {
-      label: "PrÃƒÂ©-anÃƒÂ¡lise elegÃƒÂ­vel",
+      label: "Pré-análise elegível",
       title:
-        "Projeto elegÃƒÂ­vel para diagnÃƒÂ³stico inicial. A anÃƒÂ¡lise deve confirmar tensÃƒÂ£o de atendimento, padrÃƒÂ£o de entrada e exigÃƒÂªncias locais."
+        "Projeto elegível para diagnóstico inicial. A análise deve confirmar tensão de atendimento, padrão de entrada e exigências locais."
     };
   }, [demand, parsedDemand]);
 
@@ -191,14 +191,14 @@ function App() {
             <img src={logoSrc} alt="Renovera" />
           </a>
 
-          <nav className="nav-links" aria-label="NavegaÃƒÂ§ÃƒÂ£o principal">
-            <a href="#solucoes">SoluÃƒÂ§ÃƒÂµes</a>
+          <nav className="nav-links" aria-label="Navegação principal">
+            <a href="#solucoes">Soluções</a>
             <a href="#viabilidade">Viabilidade</a>
-            <a href="#metodo">MÃƒÂ©todo</a>
+            <a href="#metodo">Método</a>
           </nav>
 
           <button className="nav-cta" onClick={() => setModalOpen(true)}>
-            Solicitar anÃƒÂ¡lise
+            Solicitar análise
           </button>
         </div>
       </header>
@@ -207,17 +207,17 @@ function App() {
         <section className="hero engenharia-hero" id="inicio">
           <div className="container hero-grid">
             <div className="hero-copy">
-              <span className="pill pill-dark">Renovera Engenharia | Projetos ElÃƒÂ©tricos</span>
-              <h1>Projeto elÃƒÂ©trico aprovado com mÃƒÂ©todo e autoridade tÃƒÂ©cnica.</h1>
+              <span className="pill pill-dark">Renovera Engenharia | Projetos Elétricos</span>
+              <h1>Projeto elétrico aprovado com método e autoridade técnica.</h1>
               <p>
-                Projetos de baixa, mÃƒÂ©dia e alta tensÃƒÂ£o, subestaÃƒÂ§ÃƒÂµes, estudos de proteÃƒÂ§ÃƒÂ£o,
-                padrÃƒÂµes de entrada e viabilidade para consumidores do Grupo A que
+                Projetos de baixa, média e alta tensão, subestações, estudos de proteção,
+                padrões de entrada e viabilidade para consumidores do Grupo A que
                 precisam aprovar infraestrutura.
               </p>
 
               <div className="hero-actions">
                 <button className="btn btn-secondary" onClick={() => setModalOpen(true)}>
-                  Quero destravar minha aprovaÃƒÂ§ÃƒÂ£o
+                  Quero destravar minha aprovação
                   <ArrowRight size={18} />
                 </button>
                 <a className="btn btn-primary" href={whatsappLink} target="_blank" rel="noreferrer">
@@ -231,13 +231,13 @@ function App() {
               <div className="engineering-card">
                 <div className="engineering-top">
                   <span>Renovera GridDesk</span>
-                  <strong>Em anÃƒÂ¡lise</strong>
+                  <strong>Em análise</strong>
                 </div>
 
                 <div className="substation-diagram">
                   <div className="node node-a">MT</div>
                   <div className="node node-b">SE</div>
-                  <div className="node node-c">RELÃƒâ€°</div>
+                  <div className="node node-c">RELÉ</div>
                   <div className="node node-d">CARGA</div>
                   <span className="line line-1" />
                   <span className="line line-2" />
@@ -245,25 +245,25 @@ function App() {
                 </div>
 
                 <div className="engineering-main">
-                  <span>DiagnÃƒÂ³stico preliminar</span>
-                  <strong>Entrada de energia + proteÃƒÂ§ÃƒÂ£o</strong>
+                  <span>Diagnóstico preliminar</span>
+                  <strong>Entrada de energia + proteção</strong>
                   <p>
-                    AnÃƒÂ¡lise de demanda, concessionÃƒÂ¡ria, padrÃƒÂ£o de entrada,
-                    seletividade e estratÃƒÂ©gia de aprovaÃƒÂ§ÃƒÂ£o.
+                    Análise de demanda, concessionária, padrão de entrada,
+                    seletividade e estratégia de aprovação.
                   </p>
                 </div>
 
                 <div className="engineering-list">
                   <div>
-                    <span>Memorial tÃƒÂ©cnico</span>
+                    <span>Memorial técnico</span>
                     <strong>Executivo</strong>
                   </div>
                   <div>
                     <span>Interface</span>
-                    <strong>ConcessionÃƒÂ¡ria</strong>
+                    <strong>Concessionária</strong>
                   </div>
                   <div>
-                    <span>CritÃƒÂ©rio</span>
+                    <span>Critério</span>
                     <strong>Seletividade</strong>
                   </div>
                 </div>
@@ -275,9 +275,9 @@ function App() {
         <section className="trust-strip">
           <div className="container trust-grid">
             {[
-              ["AprovaÃƒÂ§ÃƒÂ£o tÃƒÂ©cnica", "DocumentaÃƒÂ§ÃƒÂ£o preparada para reduzir exigÃƒÂªncias e retrabalho."],
-              ["ConcessionÃƒÂ¡rias", "Interface tÃƒÂ©cnica com CPFL, Neoenergia, Energisa, Cemig, EDP e outras."],
-              ["OperaÃƒÂ§ÃƒÂ£o crÃƒÂ­tica", "Projeto pensado para continuidade, seguranÃƒÂ§a e expansÃƒÂ£o futura."]
+              ["Aprovação técnica", "Documentação preparada para reduzir exigências e retrabalho."],
+              ["Concessionárias", "Interface técnica com CPFL, Neoenergia, Energisa, Cemig, EDP e outras."],
+              ["Operação crítica", "Projeto pensado para continuidade, segurança e expansão futura."]
             ].map(([title, description]) => (
               <div className="trust-item" key={title}>
                 <BadgeCheck size={22} />
@@ -293,8 +293,8 @@ function App() {
         <section className="section" id="solucoes">
           <div className="container">
             <div className="section-head center">
-              <span className="pill">SoluÃƒÂ§ÃƒÂµes tÃƒÂ©cnicas</span>
-              <h2>Escopo tÃƒÂ©cnico para quem precisa aprovar certo.</h2>
+              <span className="pill">Soluções técnicas</span>
+              <h2>Escopo técnico para quem precisa aprovar certo.</h2>
             </div>
 
             <div className="services-grid">
@@ -321,18 +321,18 @@ function App() {
         <section className="section viability" id="viabilidade">
           <div className="container">
             <div className="section-head center">
-              <span className="pill">DiagnÃƒÂ³stico tÃƒÂ©cnico</span>
-              <h2>Descubra se sua infraestrutura estÃƒÂ¡ pronta para aprovaÃƒÂ§ÃƒÂ£o.</h2>
+              <span className="pill">Diagnóstico técnico</span>
+              <h2>Descubra se sua infraestrutura está pronta para aprovação.</h2>
               <p>
-                Um prÃƒÂ©-check tÃƒÂ©cnico para captar leads qualificados e transformar
-                interesse em conversa comercial com dados mÃƒÂ­nimos do projeto.
+                Um pré-check técnico para captar leads qualificados e transformar
+                interesse em conversa comercial com dados mínimos do projeto.
               </p>
             </div>
 
             <div className="checker-card">
               <div className="checker-form">
                 <label>
-                  <span>1. Selecione a concessionÃƒÂ¡ria local</span>
+                  <span>1. Selecione a concessionária local</span>
                   <select value={utility} onChange={(event) => setUtility(event.target.value)}>
                     {concessionarias.map((item) => (
                       <option key={item}>{item}</option>
@@ -351,7 +351,7 @@ function App() {
                 </label>
 
                 <div>
-                  <span className="field-title">3. O projeto envolve migraÃƒÂ§ÃƒÂ£o para o Mercado Livre?</span>
+                  <span className="field-title">3. O projeto envolve migração para o Mercado Livre?</span>
                   <div className="radio-grid">
                     {aclOptions.map((option) => (
                       <button
@@ -367,14 +367,14 @@ function App() {
                 </div>
 
                 <button className="btn btn-secondary full" onClick={() => setModalOpen(true)}>
-                  Receber diagnÃƒÂ³stico tÃƒÂ©cnico preliminar
+                  Receber diagnóstico técnico preliminar
                   <ArrowRight size={18} />
                 </button>
               </div>
 
               <aside className="checker-result">
-                <span>PrÃƒÂ©-leitura tÃƒÂ©cnica</span>
-                <DataBox label="ConcessionÃƒÂ¡ria" value={utility} />
+                <span>Pré-leitura técnica</span>
+                <DataBox label="Concessionária" value={utility} />
                 <DataBox label="Demanda" value={`${demand || "--"} kW`} />
                 <DataBox label="ACL" value={acl} />
                 <div className="result-box">
@@ -382,7 +382,7 @@ function App() {
                   <p>{viability.title}</p>
                 </div>
                 <button className="btn btn-outline full" onClick={() => setModalOpen(true)}>
-                  Solicitar validaÃƒÂ§ÃƒÂ£o completa
+                  Solicitar validação completa
                   <Sparkles size={18} />
                 </button>
               </aside>
@@ -394,13 +394,13 @@ function App() {
           <div className="container split-grid">
             <div className="section-head compact">
               <span className="pill">Clientes corporativos</span>
-              <h2>Para operaÃƒÂ§ÃƒÂµes onde energia ÃƒÂ© infraestrutura estratÃƒÂ©gica.</h2>
+              <h2>Para operações onde energia é infraestrutura estratégica.</h2>
               <p>
-                Ideal para empresas com alta demanda, expansÃƒÂ£o de planta, novas
-                entradas de energia, adequaÃƒÂ§ÃƒÂµes de subestaÃƒÂ§ÃƒÂ£o ou avaliaÃƒÂ§ÃƒÂ£o de ACL.
+                Ideal para empresas com alta demanda, expansão de planta, novas
+                entradas de energia, adequações de subestação ou avaliação de ACL.
               </p>
               <button className="btn btn-secondary dark-text" onClick={() => setModalOpen(true)}>
-                Quero uma leitura tÃƒÂ©cnica do meu caso
+                Quero uma leitura técnica do meu caso
                 <Target size={18} />
               </button>
             </div>
@@ -423,11 +423,11 @@ function App() {
         <section className="section" id="metodo">
           <div className="container">
             <div className="section-head center">
-              <span className="pill">MÃƒÂ©todo Renovera</span>
-              <h2>Da dÃƒÂºvida tÃƒÂ©cnica atÃƒÂ© o protocolo aprovado.</h2>
+              <span className="pill">Método Renovera</span>
+              <h2>Da dúvida técnica até o protocolo aprovado.</h2>
               <p>
-                A estrutura segue a mesma lÃƒÂ³gica das landing pages anteriores:
-                autoridade no topo, prova tÃƒÂ©cnica no meio e CTA forte em todas as etapas.
+                A estrutura segue a mesma lógica das landing pages anteriores:
+                autoridade no topo, prova técnica no meio e CTA forte em todas as etapas.
               </p>
             </div>
 
@@ -445,11 +445,11 @@ function App() {
 
         <section className="final-cta">
           <div className="container final-card">
-            <span className="pill pill-dark">AprovaÃƒÂ§ÃƒÂ£o com rigor tÃƒÂ©cnico</span>
-            <h2>Evite reprovaÃƒÂ§ÃƒÂµes, exigÃƒÂªncias sucessivas e atrasos na entrada de operaÃƒÂ§ÃƒÂ£o.</h2>
+            <span className="pill pill-dark">Aprovação com rigor técnico</span>
+            <h2>Evite reprovações, exigências sucessivas e atrasos na entrada de operação.</h2>
             <p>
-              Antes de protocolar ou investir em adequaÃƒÂ§ÃƒÂµes, fale com quem entende
-              de projeto, proteÃƒÂ§ÃƒÂ£o, concessionÃƒÂ¡ria e regulaÃƒÂ§ÃƒÂ£o.
+              Antes de protocolar ou investir em adequações, fale com quem entende
+              de projeto, proteção, concessionária e regulação.
             </p>
             <div className="final-actions">
               <button className="btn btn-secondary" onClick={() => setModalOpen(true)}>
@@ -457,7 +457,7 @@ function App() {
                 <Workflow size={18} />
               </button>
               <a className="btn btn-primary" href={whatsappLink} target="_blank" rel="noreferrer">
-                Chamar no WhatsApp tÃƒÂ©cnico
+                Chamar no WhatsApp técnico
                 <Phone size={18} />
               </a>
             </div>
@@ -468,32 +468,32 @@ function App() {
         <div className="container footer-grid">
           <div className="footer-brand">
             <img src={logoSrc} alt="Renovera" />
-            <p>Engenharia, projetos elÃƒÂ©tricos e consultoria tÃƒÂ©cnica para empresas que precisam aprovar infraestrutura com seguranÃƒÂ§a e precisÃƒÂ£o.</p>
+            <p>Engenharia, projetos elétricos e consultoria técnica para empresas que precisam aprovar infraestrutura com segurança e precisão.</p>
           </div>
 
           <div className="footer-col">
             <h4>Menu</h4>
-            <a href="#solucoes">SoluÃ§Ãµes</a>
+            <a href="#solucoes">Soluções</a>
             <a href="#viabilidade">Viabilidade</a>
-            <a href="#metodo">MÃ©todo</a>
+            <a href="#metodo">Método</a>
             <a href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp</a>
           </div>
 
           <div className="footer-col">
             <h4>Contato</h4>
             <p>R. Visc. de Rio Branco, 106</p>
-            <p>SÃ£o JoÃ£o da Boa Vista - SP</p>
-            <a href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp tÃ©cnico</a>
+            <p>São João da Boa Vista - SP</p>
+            <a href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp técnico</a>
           </div>
 
           <div className="footer-col">
-            <h4>Escopo tÃ©cnico</h4>
-            <p>Projetos elÃ©tricos, subestaÃ§Ãµes, proteÃ§Ã£o, entrada de energia, concessionÃ¡rias e ACL.</p>
+            <h4>Escopo técnico</h4>
+            <p>Projetos elétricos, subestações, proteção, entrada de energia, concessionárias e ACL.</p>
           </div>
-
         </div>
+
         <div className="container footer-bottom">
-          <span>Ã‚Â© {new Date().getFullYear()} Renovera Energias RenovÃƒÂ¡veis Ltda. Todos os direitos reservados.</span>
+          <span>© {new Date().getFullYear()} Renovera Energias Renováveis Ltda. Todos os direitos reservados.</span>
         </div>
       </footer>
 
@@ -549,13 +549,13 @@ function LeadModal({
     event.preventDefault();
 
     const message = [
-      "OlÃƒÂ¡, quero solicitar um diagnÃƒÂ³stico tÃƒÂ©cnico com a Renovera.",
+      "Olá, quero solicitar um diagnóstico técnico com a Renovera.",
       "",
       `Empresa: ${form.empresa}`,
       `E-mail: ${form.email}`,
       `CNPJ: ${form.cnpj}`,
       `Telefone: ${form.telefone}`,
-      `ConcessionÃƒÂ¡ria: ${utility}`,
+      `Concessionária: ${utility}`,
       `Demanda: ${demand || "--"} kW`,
       `ACL: ${acl}`
     ].join("\n");
@@ -569,11 +569,11 @@ function LeadModal({
       <div className="lead-modal">
         <div className="modal-head">
           <div>
-            <span className="pill small">AnÃƒÂ¡lise tÃƒÂ©cnica Renovera</span>
-            <h3>Solicitar diagnÃƒÂ³stico de viabilidade</h3>
+            <span className="pill small">Análise técnica Renovera</span>
+            <h3>Solicitar diagnóstico de viabilidade</h3>
             <p>
-              Envie os dados corporativos para uma primeira leitura tÃƒÂ©cnica da
-              demanda, concessionÃƒÂ¡ria, entrada de energia e escopo regulatÃƒÂ³rio.
+              Envie os dados corporativos para uma primeira leitura técnica da
+              demanda, concessionária, entrada de energia e escopo regulatório.
             </p>
           </div>
           <button className="modal-close" onClick={onClose} aria-label="Fechar">
@@ -600,7 +600,7 @@ function LeadModal({
           </label>
 
           <div className="modal-summary">
-            <MiniSummary icon={MapPin} label="ConcessionÃƒÂ¡ria" value={utility} />
+            <MiniSummary icon={MapPin} label="Concessionária" value={utility} />
             <MiniSummary icon={Gauge} label="Demanda" value={`${demand || "--"} kW`} />
             <MiniSummary icon={Landmark} label="ACL" value={acl} />
           </div>
@@ -611,7 +611,7 @@ function LeadModal({
           </button>
 
           <p className="form-note">
-            <Mail size={16} /> O botÃƒÂ£o abre o WhatsApp com os dados preenchidos.
+            <Mail size={16} /> O botão abre o WhatsApp com os dados preenchidos.
           </p>
         </form>
       </div>
