@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://renovera1.github.io/renovera-projetos-eletricos/sitemap.xml
