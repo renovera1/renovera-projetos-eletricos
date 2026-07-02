@@ -33,7 +33,59 @@
     <title>Kairós Engenharia | Engenharia, Regulação e Inteligência Energética</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <style>
+        .initial-shell {
+          min-height: 100vh;
+          margin: 0;
+          padding: 128px 20px 80px;
+          color: #f8fafc;
+          background:
+            linear-gradient(rgba(94, 234, 212, 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(94, 234, 212, 0.08) 1px, transparent 1px),
+            #061525;
+          background-size: 42px 42px;
+          font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        }
+
+        .initial-shell__inner {
+          max-width: 1120px;
+          margin: 0 auto;
+        }
+
+        .initial-shell__eyebrow {
+          color: #5eead4;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.16em;
+          margin: 0 0 28px;
+          text-transform: uppercase;
+        }
+
+        .initial-shell h1 {
+          max-width: 920px;
+          margin: 0;
+          font-size: clamp(2.25rem, 7vw, 4rem);
+          line-height: 1.08;
+          letter-spacing: 0;
+        }
+
+        .initial-shell p {
+          max-width: 680px;
+          margin: 24px 0 0;
+          color: #cbd5e1;
+          font-size: 1.05rem;
+          line-height: 1.8;
+        }
+      </style>
+      <main class="initial-shell" aria-label="Kairós Engenharia">
+        <div class="initial-shell__inner">
+          <p class="initial-shell__eyebrow">Engenharia, regulação e inteligência energética</p>
+          <h1>Engenharia de Alta Performance, Inteligência de Dados e Soluções Regulatórias para o Mercado de Energia.</h1>
+          <p>Projetos elétricos, conexão à rede, consultoria regulatória e inteligência energética para empresas que precisam tomar decisões técnicas com segurança.</p>
+        </div>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
