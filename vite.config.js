@@ -1,0 +1,20 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  base: "/renovera-projetos-eletricos/",
+  plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: "assets/[name].js",
+        chunkFileNames: "assets/[name].js",
+        assetFileNames: "assets/[name].[ext]",
+      },
+    },
+  },
+  test: {
+    globals: true,
+    setupFiles: "./src/test/setup.jsx",
+  },
+});
